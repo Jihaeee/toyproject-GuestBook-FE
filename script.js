@@ -38,6 +38,14 @@ async function getGuestbookList() {
         card.appendChild(writer);
         card.appendChild(content);
 
+        console.log(input);
+
+        const time = document.createElement('p');
+        const createdAt = new Date(input.created); 
+        time.innerText = `🐾 ${createdAt.toLocaleString()}`; 
+        card.appendChild(time);
+                
+
         const deleteBtn = document.createElement('button');
         deleteBtn.innerText = '삭제';
         deleteBtn.classList.add('deleteBtn');
